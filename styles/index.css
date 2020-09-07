@@ -31,7 +31,7 @@ svg:not(:root).svg-inline--fa {
 body {
   background-color: #fcfcfc;
   color: #21201f;
-  font-family: "Unna", serif;
+  font-family: 'Unna', serif;
   min-height: 100vh;
   margin: 0;
   font-size: 24px;
@@ -204,7 +204,7 @@ h2.with-line {
 
 h2.with-line::after,
 h2.with-line::before {
-  content: "";
+  content: '';
   display: block;
   height: 1px;
   width: 200px;
@@ -355,7 +355,7 @@ h2.with-line::before {
 }
 
 .external-link.inline::after {
-  content: " ";
+  content: ' ';
   white-space: pre-wrap;
 }
 
