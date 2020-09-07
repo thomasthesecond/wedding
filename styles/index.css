@@ -85,12 +85,6 @@ h1 {
   }
 }
 
-@media (max-width: 479px) {
-  h1 {
-    font-size: 40px;
-  }
-}
-
 .amp {
   font-family: 'Unna', serif;
   font-style: italic;
@@ -110,15 +104,6 @@ h1 .amp {
     margin-left: 40px;
     right: -8px;
     top: -20px;
-  }
-}
-
-@media (max-width: 479px) {
-  h1 .amp {
-    font-size: 40px;
-    margin-left: 20px;
-    right: -2px;
-    top: -10px;
   }
 }
 
