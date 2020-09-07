@@ -2,47 +2,13 @@
   font-family: 'Memento Mori';
   font-weight: 400;
   src: url(../font/MementoMori-Regular.ttf);
-  src: url(../font/MementoMori-Regular.woff2) format('woff2'), url(../font/MementoMori-Regular.woff) format('woff');
+  src: url(../font/MementoMori-Regular.woff2) format('woff2'),
+       url(../font/MementoMori-Regular.woff) format('woff');
 }
 
-/* latin-ext */
-@font-face {
-  font-family: 'Unna';
-  font-style: italic;
-  font-weight: 400;
-  font-display: swap;
-  src: local('Unna Italic'), local('Unna-Italic'), url(https://fonts.gstatic.com/s/unna/v13/AYCKpXzofN0NOpo7mUnGalBixs6G.woff2) format('woff2');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Unna';
-  font-style: italic;
-  font-weight: 400;
-  font-display: swap;
-  src: local('Unna Italic'), local('Unna-Italic'), url(https://fonts.gstatic.com/s/unna/v13/AYCKpXzofN0NOpo7l0nGalBixg.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Unna';
-  font-style: italic;
-  font-weight: 700;
-  font-display: swap;
-  src: local('Unna Bold Italic'), local('Unna-BoldItalic'), url(https://fonts.gstatic.com/s/unna/v13/AYCJpXzofN0NOpozLGzTSXJv7PSP5L_G.woff2) format('woff2');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Unna';
-  font-style: italic;
-  font-weight: 700;
-  font-display: swap;
-  src: local('Unna Bold Italic'), local('Unna-BoldItalic'), url(https://fonts.gstatic.com/s/unna/v13/AYCJpXzofN0NOpozLGzTR3Jv7PSP5A.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -85,7 +51,20 @@ body {
   line-height: 1.5;
 }
 
-h1 {  
+a {
+  color: crimson;
+}
+
+a:hover {
+  color: brown;
+}
+
+a:focus {
+  outline: 0;
+  box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.5);
+}
+
+h1 {
   font-family: 'Memento Mori';
   font-weight: 400;
   font-style: normal;
@@ -103,7 +82,7 @@ h1 {
     opacity: 0;
 /*     transform: translateY(-100px); */
   }
-  
+
   100% {
     opacity: 1;
 /*     transform: translateY(0); */
@@ -219,7 +198,7 @@ h2.with-line::before {
 }
 
 .top-left,
-.top-right, 
+.top-right,
 .bottom-left,
 .bottom-right {
   width: 25%;
@@ -261,13 +240,24 @@ h2.with-line::before {
 
 .button:hover {
   /* background-color: #21201f; */
-  /* color: #fcfcfc; */
-  background-color: #000;
+  color: #fcfcfc;
+  /* background-color: #000; */
+  background-color: crimson;
+}
+
+.button.small {
+  font-size: 1em;
+  padding: 10px 30px;
 }
 
 .external-link {
   color: inherit;
   text-decoration: none;
+}
+
+.external-link.inline::after {
+  content: " ";
+  white-space: pre-wrap;
 }
 
 .external-link span {
@@ -279,4 +269,8 @@ h2.with-line::before {
   font-size: 0.4em;
   /* transform: translate(6px, -4px); */
   transform: translate(0.6em, -0.3em);
+}
+
+.external-link:hover {
+  color: crimson;
 }
